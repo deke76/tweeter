@@ -24,6 +24,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </head>
 
@@ -37,7 +38,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="page_header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -50,19 +51,29 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new_tweet_input">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <label for="tweet_text"></label>
-          <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet_text" placeholder="What are you humming about?" value="tweet"></textarea>
           <div class="button_counter">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet_text">140</output>
+            <output name="counter" class="counter" for="tweet_text"></output>
           </div>
         </form>
       </section>
-      <div class="new_tweet_body">
-        <p>a bunch of words equal to or less than 140 characters</p>
-      </div>
+      <article class='tweet_container'>
+        <header>
+          <div class="avatar">Newton</div>
+          <div class="user">@sirIsaac</div>
+        </header>
+        <div class="tweet_body">some text less than or equal to 140 characters</div>
+        <footer>
+          <div class="time_created">time created</div>
+          <div class="interaction">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i></div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
