@@ -1,13 +1,15 @@
 $(document).ready(function() {
 
   // varaible declarations
-  const CHAR_LIMIT = 140;
+  
   $('.counter').text(CHAR_LIMIT);
   $('#varCharsRemaining').text(CHAR_LIMIT);
 
   // counter logic
-  $('#tweet_text').keyup(function() {
+  $('#tweet_text').keyup(function(event) {
+
     let tweetLength = CHAR_LIMIT - $(this).val().length;
+    if (event.keyCode == 13) $('form').trigger('submit');
     $('.counter').text(tweetLength);
     if (tweetLength < 0) {
       $('.counter').css('color', 'red');
