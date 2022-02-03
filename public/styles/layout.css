@@ -16,7 +16,6 @@ html {
 
 body {
   color: #545149;
-
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -35,10 +34,13 @@ body {
   height: 100%;
   background-color: wheat;
   align-items: center;
+  align-content: center;
 }
 
 .tweet_body {
+  justify-self: center;
   text-align: center;
+  width: 90%;
 }
 
 .tweet_container {
@@ -57,6 +59,12 @@ body {
   margin: 0.5em 0.5em;
 }
 
+.tweet > div {
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+
 .tweet:hover {
   box-shadow:0.5em 0.5em rgba(84, 81, 73, 0.5);
 }
@@ -68,7 +76,7 @@ article > header, article > footer{
   align-items: center;
   height: 1.3em;
   margin: .5em;
-  opacity: 0.25;
+  color: rgba(84, 81, 73, 0.5)
 }
 
 .avatar {
@@ -81,6 +89,20 @@ article > header, article > footer{
   margin-left: 0.5em;
 }
 
-.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+.fa-solid.fa-flag:hover::before, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover{
   color:rgba(64, 86, 161, 1);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page_layout {
+    display:flex;
+    flex-direction:row;
+    height: 100%;
+  }
+  .container {
+    margin-top: 100px;
+    padding-top: 20px;
+    margin-left:20%;
+  }
 }

@@ -14,11 +14,15 @@ $(document).ready(function() {
     } else $('#scroll_button').hide()
   });
 
+  // scroll up when the to top button is pressed
+  $('#scroll_button').click( () => {
+      $(window).scrollTop(0);
+  });
+
   // show the input form when clicking the new tweet button
   $('.fa-angles-down').click(() => {
     $('.new_tweet_input').slideToggle('slow');
     $('#tweet_text').focus();
-    console.log('clicked the nav element');
   })
 
   // get the tweets to display on the page

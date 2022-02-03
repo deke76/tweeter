@@ -39,31 +39,32 @@
       </div>
     </nav>
 
-    <header class="page_header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
+    <div class='page_layout'>  
+      <header class="page_header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2>Your Name</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new_tweet_input">
-        <div class="error_message">Some error message</div>
-        <form method="POST" action="/tweets">
-          <label for="tweet_text"></label>
-          <textarea name="text" id="tweet_text" placeholder="What are you humming about?" value="tweet"></textarea>
-          <div class="button_counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet_text"></output>
-          </div>
-        </form>
-      </section>
-      <div class='tweet_container'></div>
-      <button type="button" id="scroll_button"><i class="fa-solid fa-angles-up"></i></button>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new_tweet_input">
+          <div class="error_message">Some error message</div>
+          <form method="POST" action="/tweets">
+            <div><label for="tweet_text"></label></div>
+            <div><textarea name="text" id="tweet_text" placeholder="What are you humming about?" value="tweet"></textarea></div>
+            <div class="button_counter">
+              <div><button type="submit">Tweet</button></div>
+              <div><output name="counter" class="counter" for="tweet_text"></output></div>
+            </div>
+          </form>
+        </section>
+        <div class='tweet_container'></div>
+        <button type="button" id="scroll_button"><i class="fa-solid fa-angles-up"></i></button>
+      </main>
+    </div>
   </body>
 </html>
