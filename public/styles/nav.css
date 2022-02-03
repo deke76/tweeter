@@ -24,14 +24,15 @@ nav span {
   align-items: center;
 }
 
-.new_tweet:last-child {
-  cursor: pointer;
-}
-
 .fa-angles-down {
   position: relative;
   margin-top: 12px;
   animation: up_down 2s infinite;
+}
+
+.fa-angles-down:hover {
+  color: goldenrod;
+  cursor: pointer;
 }
 
 #scroll_button {

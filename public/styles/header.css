@@ -16,6 +16,7 @@
   .page_header {
     height: 100vh;
     width: 20%;
-    position:fixed
+    position:fixed;
+    justify-content: flex-start;
   }
 }

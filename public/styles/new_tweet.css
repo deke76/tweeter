@@ -28,17 +28,7 @@ form {
   border-bottom: 2px solid grey;
   margin-bottom: 0.5em;
   overflow: hidden;
-  padding: 1em;
-}
-
-textarea {
-  justify-self: center;
-  align-self: center;
   text-align: center;
-}
-
-textarea:focus::placeholder {
-  color: transparent;
 }
 
 .button_counter {
