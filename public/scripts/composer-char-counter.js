@@ -1,12 +1,12 @@
 $(document).ready(function() {
   
-  let charsRemaining = 140;
+  const CHAR_LIMIT = 140;
 
-  $('.counter').text(charsRemaining);
-  $('#varCharsRemaining').text(charsRemaining);
+  $('.counter').text(CHAR_LIMIT);
+  $('#varCharsRemaining').text(CHAR_LIMIT);
 
   $('#tweet_text').keyup(function() {
-    let tweetLength = charsRemaining - $(this).val().length;
+    let tweetLength = CHAR_LIMIT - $(this).val().length;
     $('.counter').text(tweetLength);
     if (tweetLength < 0) {
       $('.counter').css('color', 'red');

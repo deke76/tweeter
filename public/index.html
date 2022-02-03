@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
     
     <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,7 +35,7 @@
       <span class="logo">TWEETER</span>
       <div class="new_tweet">
         <div class="directions"><b>Write </b> a new tweet</div>
-        <div<i class="fa-solid fa-angles-down"></i></div>
+        <div><i class="fa-solid fa-angles-down"></i></div>
       </div>
     </nav>
 
@@ -51,6 +52,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new_tweet_input">
+        <div class="error_message">Some error message</div>
         <form method="POST" action="/tweets">
           <label for="tweet_text"></label>
           <textarea name="text" id="tweet_text" placeholder="What are you humming about?" value="tweet"></textarea>
@@ -60,20 +62,8 @@
           </div>
         </form>
       </section>
-      <article class='tweet_container'>
-        <header>
-          <div class="avatar">Newton</div>
-          <div class="user">@sirIsaac</div>
-        </header>
-        <div class="tweet_body">some text less than or equal to 140 characters</div>
-        <footer>
-          <div class="time_created">time created</div>
-          <div class="interaction">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i></div>
-        </footer>
-      </article>
+      <div class='tweet_container'></div>
+      <button type="button" id="scroll_button"><i class="fa-solid fa-angles-up"></i></button>
     </main>
   </body>
 </html>

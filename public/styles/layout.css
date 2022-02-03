@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -25,10 +25,14 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ *:focus {
+   outline:none;
+ }
+
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: wheat;
   align-items: center;
 }
@@ -39,6 +43,13 @@ body {
 
 .tweet_container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.tweet {
+  display: flex;
   width: 90%;
   flex-direction: column;
   border-style: solid;
@@ -46,7 +57,7 @@ body {
   margin: 0.5em 0.5em;
 }
 
-.tweet_container:hover {
+.tweet:hover {
   box-shadow:0.5em 0.5em rgba(84, 81, 73, 0.5);
 }
 
@@ -54,12 +65,22 @@ article > header, article > footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   height: 1.3em;
   margin: .5em;
   opacity: 0.25;
 }
 
+.avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar > span {
+  margin-left: 0.5em;
+}
+
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
-  color: #000000;
-  opacity: 1;
+  color:rgba(64, 86, 161, 1);
 }

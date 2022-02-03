@@ -23,3 +23,35 @@ nav span {
   flex-direction: column;
   align-items: center;
 }
+
+.new_tweet:last-child {
+  cursor: pointer;
+}
+
+.fa-angles-down {
+  position: relative;
+  margin-top: 12px;
+  animation: up_down 2s infinite;
+}
+
+#scroll_button {
+  display: none;
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+@keyframes up_down {
+  0% { top: -12px; }
+  50% { top: 12px; }
+  100% { top: -12px; }
+}
