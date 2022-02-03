@@ -34,7 +34,8 @@ body {
   height: 100%;
   background-color: wheat;
   align-items: center;
-  align-content: center;
+  align-content: stretch;
+  width: 100%;
 }
 
 .tweet > .tweet_body {
@@ -105,6 +106,6 @@ article > header, article > footer{
   .container {
     margin-top: 100px;
     padding-top: 20px;
-    margin-left:20%;
+    margin-left:25%;
   }
 }
