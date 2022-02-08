@@ -8,7 +8,7 @@ This repository is the finished code for the project: Students will fork and clo
 
 - Express
 - Node 5.10.x or above
-- Body-{arser
+- Body-parser
 - Chance
 - Nodemon
 
