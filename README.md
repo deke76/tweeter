@@ -8,6 +8,9 @@ This repository is the finished code for the project: Students will fork and clo
 
 - Express
 - Node 5.10.x or above
+- Body-{arser
+- Chance
+- Nodemon
 
 ## Screenshots
 
@@ -16,3 +19,6 @@ This repository is the finished code for the project: Students will fork and clo
 !['Desktop screen showing scroll up button.'](./docs/desktop-layout-with-scroll-up.png)
 !['Mobile layout.'](./docs/mobile-layout.png)
 !['Mobile layout with input.'](./docs/mobile-layout-with-input.png)
+
+## Run Instructions
+start locally by ruunning npm start which will start an instance at port 8080, running npm run local will start the server with nodemon running to allow for local testing and server watching.
