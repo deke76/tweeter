@@ -36,7 +36,7 @@ $(document).ready(function() {
   // check user input for undesirable inputs
   const inputCheck = function(userInput) {
     let boolLength = true;
-    const empty = "You can't send an empty tweet you twit!"
+    const empty = "Tweets can't be empty."
     const tooLong = `Tweets need to be less than or equal to ${CHAR_LIMIT} character's`
 
     // helper function for messages and visibility
@@ -83,6 +83,7 @@ $(document).ready(function() {
       return div.innerHTML;
     }
 
+    // create the article division for each new tweet
     let safeHTML = escape(objTweet.content.text);
     const htmlTweet = `
       <article class='tweet'>
@@ -103,7 +104,7 @@ $(document).ready(function() {
     return htmlTweet;
   };
 
-  // Append the array of tweets to the main container holding the tweets
+  // prepend the array of tweets to the main container holding the tweets
   const renderTweets = function(arrTweets) {
     for (const tweet of arrTweets) {
       $('.tweet_container').prepend(createTweetElement(tweet));
