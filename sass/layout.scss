@@ -93,13 +93,9 @@ article > header, article > footer{
   margin-left: 0.5em;
 }
 
-.fa-solid.fa-flag:hover, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover {
+.fa-solid.fa-flag:hover::before, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover{
   color:rgba(64, 86, 161, 1);
   cursor: pointer;
-}
-
-.clicked {
-  color: rgba(64, 86, 161, 1);
 }
 
 @media only screen and (min-width: 1024px) {

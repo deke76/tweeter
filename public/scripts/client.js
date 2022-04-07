@@ -7,6 +7,12 @@ $(document).ready(function() {
 
   const CHAR_LIMIT = 140;
 
+  // click functionality for interaction
+  $('div.tweet_container').on('click','.fa-solid', (event) => {
+    console.log(event.target, '- clicked');
+    $(event.target).toggleClass('clicked');
+  });
+
   // show the scroll up button when the user scrolls down
   $(window).scroll( (event) => {
     if ($(window).scrollTop() > 20) {

@@ -1,0 +1,58 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position:fixed;
+  top: 0;
+  align-items: end;
+  height: 100px;
+  width:100%;
+  background-color:#4056A1;
+  color: #FFFFFF;
+  padding: .5em 1.5em;
+  z-index: 10;
+}
+
+nav span {
+  font-family: "Bungee", sans-serif;
+  align-self: flex-end;
+}
+
+.new_tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-angles-down {
+  position: relative;
+  margin-top: 12px;
+  animation: up_down 2s infinite;
+}
+
+.fa-angles-down:hover {
+  color: goldenrod;
+  cursor: pointer;
+}
+
+#scroll_button {
+  display: none;
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+@keyframes up_down {
+  0% { top: -12px; }
+  50% { top: 12px; }
+  100% { top: -12px; }
+}
