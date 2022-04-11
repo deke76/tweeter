@@ -1,9 +1,12 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 .new_tweet_input {
   display: none;
   flex-direction: column;
-  width: 90%;
   justify-items: start;
   align-items: stretch;
+  width: 90%;
   padding: 1em;
 }
 
@@ -13,27 +16,26 @@ h2 {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: stretch;
 }
 
 #tweet_text {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
   min-height: 2.6em;
-  background-color: wheat;
-  border-style: none;
-  border-bottom: 2px solid grey;
+  background-color: $main-background-color;
   margin-bottom: 0.5em;
   overflow: hidden;
   text-align: center;
+  border: {
+    style: none;
+    bottom: 2px solid $accent-half-opacity;
+  }
 }
 
 .button_counter {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   justify-content: space-between;
   margin: 5px;
   font-family: "Bungee", sans-serif
@@ -44,28 +46,32 @@ form {
 }
 
 button[type=submit] {
-  background-color: #4056A1;
-  color: wheat;
+  background-color: $navigation-background-color;
+  color: $main-background-color;
   border: 0px;
   cursor: pointer;
   justify-self: flex-start;
 }
 
 .counter {
-  font-family: "Bungee", sans-serif;
-  color: #4056A1;
-  font-style: italic;
+  color: $navigation-background-color;
+  font: {
+    family: "Bungee", sans-serif;
+    style: italic;
+  }
 }
 
 .error_message {
   display: none;
-  width: 90%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-self: center;
-  border-style: solid;
-  border-color: #545149;
+  width: 90%;
   height: 2em;
   margin: 1em;
+  border: {
+    style: solid;
+    color: #545149;
+  }
 }

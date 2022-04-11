@@ -1,3 +1,6 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -15,10 +18,12 @@ html {
  */
 
 body {
-  color: #545149;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: wheat;
+  font: {
+    size: 24px;
+    family: 'Source Sans Pro', sans-serif;
+  }
+  color: $accent-full-opacity;
+  background-color: $main-background-color;
 }
 
 /*
@@ -30,78 +35,82 @@ body {
  }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: wheat;
+  @include flex-column;
   align-items: center;
   align-content: stretch;
+  background-color: $main-background-color;
+  height: 100%;
   width: 100%;
 }
 
-.tweet > .tweet_body {
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  width: 90%;
-  border-bottom:2px solid rgba(84, 81, 73, 0.5);
-}
-
 .tweet_container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
   width:100%;
 }
 
 .tweet {
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  border-style: solid;
-  border-color: #545149;
+  @include flex-column;
   margin: 0.5em 0.5em;
+  width: 90%;
+  border: {
+    style: solid;
+    color: $accent-full-opacity;
+  }
+  
+  &:hover {
+    box-shadow:0.5em 0.5em $accent-half-opacity;
+  }
+
+  & > div {
+    @include flex-row;
+    justify-content: center;
+    width:100%;
+  }
+
+  & > .tweet_body {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    width: 90%;
+    border-bottom: 2px solid $accent-half-opacity;
+  }
 }
 
-.tweet > div {
-  display: flex;
-  justify-content: center;
-  width:100%;
-}
-
-.tweet:hover {
-  box-shadow:0.5em 0.5em rgba(84, 81, 73, 0.5);
-}
-
-article > header, article > footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.3em;
-  margin: .3em .5em;
-  color: rgba(84, 81, 73, 0.5)
+article {
+  &  > header, > footer {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.3em;
+    margin: .3em .5em;
+    color: $accent-half-opacity;
+  }
 }
 
 .avatar {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   align-items: center;
+
+  & span {
+    margin-left: 0.5em;
+  }
 }
 
-.avatar > span {
-  margin-left: 0.5em;
-}
+
 
 .fa-solid.fa-flag:hover::before, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover{
-  color:rgba(64, 86, 161, 1);
+  color: $navigation-background-color;
   cursor: pointer;
+}
+
+.clicked {
+  color: $navigation-background-color;
 }
 
 @media only screen and (min-width: 1024px) {
   .page_layout {
-    display:flex;
-    flex-direction:row;
+    @include flex-row;
     height: 100%;
   }
   .container {

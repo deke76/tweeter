@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,74 +14,70 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
-  color: #545149;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(84, 81, 73);
   background-color: wheat;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- *:focus {
-   outline:none;
- }
+*:focus {
+  outline: none;
+}
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: wheat;
   align-items: center;
   align-content: stretch;
+  background-color: wheat;
+  height: 100%;
   width: 100%;
-}
-
-.tweet > .tweet_body {
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  width: 90%;
-  border-bottom:2px solid rgba(84, 81, 73, 0.5);
 }
 
 .tweet_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
 }
 
 .tweet {
   display: flex;
-  width: 90%;
   flex-direction: column;
-  border-style: solid;
-  border-color: #545149;
   margin: 0.5em 0.5em;
+  width: 90%;
+  border-style: solid;
+  border-color: rgb(84, 81, 73);
 }
-
+.tweet:hover {
+  box-shadow: 0.5em 0.5em rgba(84, 81, 73, 0.5);
+}
 .tweet > div {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  width:100%;
+  width: 100%;
+}
+.tweet > .tweet_body {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  width: 90%;
+  border-bottom: 2px solid rgba(84, 81, 73, 0.5);
 }
 
-.tweet:hover {
-  box-shadow:0.5em 0.5em rgba(84, 81, 73, 0.5);
-}
-
-article > header, article > footer{
+article > header, article > footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 1.3em;
-  margin: .3em .5em;
-  color: rgba(84, 81, 73, 0.5)
+  margin: 0.3em 0.5em;
+  color: rgba(84, 81, 73, 0.5);
 }
 
 .avatar {
@@ -88,29 +85,29 @@ article > header, article > footer{
   flex-direction: row;
   align-items: center;
 }
-
-.avatar > span {
+.avatar span {
   margin-left: 0.5em;
 }
 
-.fa-solid.fa-flag:hover, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover {
-  color:rgba(64, 86, 161, 1);
+.fa-solid.fa-flag:hover::before, .fa-solid.fa-retweet:hover, .fa-solid.fa-heart:hover {
+  color: #4056A1;
   cursor: pointer;
 }
 
 .clicked {
-  color: rgba(64, 86, 161, 1);
+  color: #4056A1;
 }
 
 @media only screen and (min-width: 1024px) {
   .page_layout {
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     height: 100%;
   }
+
   .container {
     margin-top: 100px;
     padding-top: 20px;
-    margin-left:25%;
+    margin-left: 25%;
   }
 }
